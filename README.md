@@ -24,9 +24,9 @@ docker-compose up
 
 ### 1.5 In Settings > JSON API, activate 'Core', 'Posts', and 'User'
 
-### 1.6 In Pages, add two new pages: pages, and profile
+### 1.6 In Pages, add two new pages: pages, and profile.  Add more if you like :)
 
-### 1.7 In Posts, add New Posts so you have at least 4
+### 1.7 In Posts, add New Posts so you have something to display
 
 
 ## 2.0 Setup - Client side React App
@@ -58,8 +58,3 @@ when you close the application
 ```
 npm start
 ```
-
-## 4.0 Known Bugs:
-
-## 4.1 Buttons folder files created in lower case
-The Buttons folder in root/client/src/components, and it's two button files FacebookButton.js and ReadMore.js, are sometimes created in lowercase.  This is wrong and it will be fixed soon.  They all need to be in uppercase.
