@@ -1,0 +1,24 @@
+.main-nav {
+  height: 64px;
+  flex-grow: 1;
+}
+
+.main-nav__menu {
+  justify-content: space-between;
+}
+
+.main-nav__menu-link {
+  text-decoration: none;
+  color: white;
+}
+
+.main-nav__menu-button {
+  margin-left: -12;
+  margin-right: 20;
+}
+
+.main-nav__menu-item {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}

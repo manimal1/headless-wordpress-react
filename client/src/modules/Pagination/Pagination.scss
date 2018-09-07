@@ -1,0 +1,34 @@
+.pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.pagination-previous {
+  margin-right: 4px;
+}
+
+.pagination-next {
+  margin-left: 4px;
+}
+
+.pagination-item {
+  padding: 8px;
+  background: #d8d8d8;
+}
+
+.pagination-post-numbers {  
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+.pagination_post-number {
+  margin-left: 4px;
+  margin-right: 4px;
+}

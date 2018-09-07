@@ -1,0 +1,11 @@
+{
+  "name": "wp-services",
+  "version": "0.0.1",
+  "description": "Api docs for wordpress rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

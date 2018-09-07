@@ -1,0 +1,33 @@
+/* --- Material-UI breakpoints ---
+xs, extra-small: 0px or larger
+sm, small: 600px or larger
+md, medium: 960px or larger
+lg, large: 1280px or larger
+xl, xlarge: 1920px or larger
+-------------------------------- */
+$small: 600px;
+$medium: 960px;
+$large: 1280px;
+$xlarge: 1920px;
+$tablet-min-width: 601px;
+$tablet-max-width: $medium;
+$tablet-landscape-max-width: $large;
+$phone-max-width: $small;
+
+@mixin tablet() {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape() {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-landscape-max-width) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @media (max-width: $phone-max-width) {
+    @content;
+  }
+}

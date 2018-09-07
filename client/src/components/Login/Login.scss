@@ -1,0 +1,24 @@
+.login-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+
+  .login-inputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-bottom: 24px;
+  }
+
+  .login-options {
+    margin-top: 24px;
+  }
+}

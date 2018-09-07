@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - ./db/dbdata:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:4.9.5
+     ports:
+       - "8000:80"
+     restart: always
+     volumes:
+       - "./wp-content/themes/postlight-headless-wp:/var/www/html/wp-content/themes/postlight-headless-wp"
+       - "./wp-content/plugins/acf-to-wp-api:/var/www/html/wp-content/plugins/acf-to-wp-api"
+       - "./wp-content/plugins/advanced-custom-fields:/var/www/html/wp-content/plugins/advanced-custom-fields"
+       - "./wp-content/plugins/custom-post-type-ui:/var/www/html/wp-content/plugins/custom-post-type-ui"
+       - "./wp-content/plugins/wp-rest-api-v2-menus:/var/www/html/wp-content/plugins/wp-rest-api-v2-menus"
+       - "./wp-content/plugins/json-api:/var/www/html/wp-content/plugins/json-api"
+       - "./wp-content/plugins/json-api-user:/var/www/html/wp-content/plugins/json-api-user"
+     environment: 
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+
+volumes:
+    dbdata:
