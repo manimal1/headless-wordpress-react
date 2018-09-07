@@ -1,7 +1,9 @@
 # This Application is for:
 
-Developers seeking to provide clients (or themselves) with the tried and true Wordpress CMS platform while allowing them to also build and employ modern frontend solutions.  It uses Node + React + Redux + headless Wordpress, as well as Docker and Nginx (Nginx config coming soon!).
-
+Developers seeking to provide clients (or themselves) with the tried and true Wordpress CMS platform while allowing them to also build and deploy modern frontend solutions.  It uses Node + React + Redux + headless Wordpress, as well as Docker.
+  
+Nginx config coming soon!  
+  
 Have Fun!!!  
   
   
