@@ -20,7 +20,6 @@ services:
        - "8000:80"
      restart: always
      volumes:
-       - "./wp-content/themes/postlight-headless-wp:/var/www/html/wp-content/themes/postlight-headless-wp"
        - "./wp-content/plugins/acf-to-wp-api:/var/www/html/wp-content/plugins/acf-to-wp-api"
        - "./wp-content/plugins/advanced-custom-fields:/var/www/html/wp-content/plugins/advanced-custom-fields"
        - "./wp-content/plugins/custom-post-type-ui:/var/www/html/wp-content/plugins/custom-post-type-ui"
