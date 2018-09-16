@@ -30,6 +30,8 @@ docker-compose up
 
 ### 1.7 In Posts, add New Posts so you have something to display
 
+### 1.8 In Appearance > Menus > Edit Menus, select 'Top Menu' in 'Menu Settings' and in the 'Pages' menu select which pages you want to display and then click 'Add to Menu'
+
 
 ## 2.0 Setup - Client side React App
 
