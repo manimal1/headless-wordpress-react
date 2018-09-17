@@ -45,7 +45,7 @@ export const getPagination = (headers, posts, postsPerPage, selectedPage) => {
     return postDataForPagination;
   });
 
-  const paginationConfig = {
+  return {
     totalPosts,
     totalPages,
     fromPost,
@@ -54,8 +54,6 @@ export const getPagination = (headers, posts, postsPerPage, selectedPage) => {
     nextPage,
     postData,
   };
-
-  return paginationConfig;
 };
 
 export const fetchPosts = async (postsPerPage = 4, selectedPage = 1) => {
