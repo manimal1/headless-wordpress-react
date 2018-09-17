@@ -26,7 +26,7 @@ docker-compose up
 
 ### 1.5 In Settings > JSON API, activate 'Core', 'Posts', and 'User'
 
-### 1.6 In Pages, add two pages named 'profile' and 'login'. With these you can test the 'PrivateRoute' functionality on login and logout. Add more if you like :)
+### 1.6 In Pages, add at least one page named 'profile'. With this you can test the 'PrivateRoute' functionality on login and logout. Add more if you like :)
 
 ### 1.7 In Posts, add New Posts so you have something to display
 
