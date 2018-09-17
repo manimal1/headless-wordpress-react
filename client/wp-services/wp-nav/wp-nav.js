@@ -9,29 +9,19 @@ const addSlugsToNav = async (navMenu) => {
   const navItems = await navMenu.items;
   const sortedMenu = _.sortBy(navItems, ['menu_order']);
   const navWithSlugs = bluebird.map(sortedMenu, async (item) => {
-    if (item.object === 'post') {
-      const data = Object.assign(item, {
-        slug: await mediaService.fetchPostSlug(item.object_id),
-      });
-      return data;
-    }
-    if (item.object === 'page') {
-      const data = Object.assign(item, {
-        slug: await fetchPageSlug(item.object_id),
-      });
-      return data;
-    }
+    const retrieveSlug = item.object === 'page'
+      ? fetchPageSlug
+      : mediaService.fetchPostSlug;
 
-    return item;
+    return Object.assign(item, {
+      slug: await retrieveSlug(item.object_id),
+    });
   });
 
   return navWithSlugs;
 };
 
-const fetchMainNav = async () => {
-  const mainNavMenu = await axios.get(WP_MAIN_NAV_MENU)
-    .then(navMenu => addSlugsToNav(navMenu.data));
-  return mainNavMenu;
-};
+const fetchMainNav = async () => axios.get(WP_MAIN_NAV_MENU)
+  .then(navMenu => addSlugsToNav(navMenu.data));
 
 export default fetchMainNav;
