@@ -9,17 +9,27 @@ export default function(state = initialState, action) {
     case userConstants.LOGIN_REQUEST:
       return {
         loggingIn: true,
+        loggedIn: false,
         user: action.user,
       };
     case userConstants.LOGIN_SUCCESS:
       return {
+        loggingIn: false,
         loggedIn: true,
         user: action.user,
       };
     case userConstants.LOGIN_FAILURE:
-      return {};
+      return {
+        loggingIn: false,
+        loggedIn: false,
+        user: {},
+      };
     case userConstants.LOGOUT:
-      return {};
+      return {
+        loggingIn: false,
+        loggedIn: false,
+        user: {},
+      };
     default:
       return state;
   }
