@@ -12,7 +12,7 @@
     "bootstrap": "~4.1.1",
     "cookies-js": "~1.2.3",
     "history": "~4.7.2",
-    "jquery": "~3.3.1",
+    "jquery": "~3.5.0",
     "lodash": "~4.17.10",
     "mui-components": "file:src/core/components",
     "node-sass-chokidar": "~1.2.2",
